@@ -1,5 +1,6 @@
 import Search from "../_components/Search";
 import HF from "../_components/HF";
+import Link from "next/link";
 
 export default function Home() {
   const About = [
@@ -43,7 +44,10 @@ export default function Home() {
             <Search />
           </div>
           <div>
-            <div className="grid mt-20 grid-cols-3 xl:grid-cols-4 gap-4">
+            <Link
+              href="/movie/1"
+              className="grid mt-20 grid-cols-3 xl:grid-cols-4 gap-4"
+            >
               {About.map((movie, index) => (
                 <div key={index} className="bg-purple-200">
                   <div className="p-10 flex flex-col gap-4">
@@ -53,7 +57,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            </div>
+            </Link>
           </div>
         </div>
       </HF>

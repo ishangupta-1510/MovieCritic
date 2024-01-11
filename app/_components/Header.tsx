@@ -9,12 +9,18 @@ const Header = () => {
           <h1>MOVIECRITIC</h1>
         </div>
         <div className="flex gap-3">
-          <p className="bg-white border outline-2 border-purple-500 rounded-md p-1 pl-2 pr-2 text-purple-500">
+          <Link
+            href="/addmovie"
+            className="bg-white border outline-2 border-purple-500 rounded-md p-1 pl-2 pr-2 text-purple-500"
+          >
             Add new movie
-          </p>
-          <p className="bg-purple-500 border outline-2 rounded-md p-1 pl-2 pr-2 text-white">
+          </Link>
+          <Link
+            href="/addreview"
+            className="bg-purple-500 border outline-2 rounded-md p-1 pl-2 pr-2 text-white"
+          >
             Add new review
-          </p>
+          </Link>
         </div>
       </div>
     </div>

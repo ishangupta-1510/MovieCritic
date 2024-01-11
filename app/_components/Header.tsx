@@ -9,8 +9,6 @@ const Header = () => {
           <h1>MOVIECRITIC</h1>
         </div>
         <div className="flex gap-3">
-          {/* <Link>Add new movie</Link>
-          <Link>Add new review</Link> */}
           <p className="bg-white border outline-2 border-purple-500 rounded-md p-1 pl-2 pr-2 text-purple-500">
             Add new movie
           </p>

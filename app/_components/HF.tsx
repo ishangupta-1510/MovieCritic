@@ -10,10 +10,10 @@ interface ChildrenInter {
 
 export default function HF({ children }: ChildrenInter) {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }

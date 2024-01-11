@@ -5,8 +5,10 @@ import { useForm } from "react-hook-form";
 
 const AddMovie = () => {
   interface Data {
+    movie: string;
     name: string;
-    releasedate: string;
+    rating: string;
+    comments: string;
   }
   const {
     register,
@@ -14,6 +16,7 @@ const AddMovie = () => {
     formState: { errors },
   } = useForm<Data>();
 
+  const movies = ["a", "b", "c", "d", "e", "f"];
   const onSubmit = (data: Data) => {
     console.log(data);
   };
@@ -25,8 +28,20 @@ const AddMovie = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid gap-4">
               <div className="border rounded-md">
+                <div className="p-3">
+                  <select
+                    className="w-full outline-none"
+                    {...register("movie")}
+                  >
+                    {movies.map((movie) => (
+                      <option value={movie}>{movie}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="border rounded-md">
                 <input
-                  placeholder="Name"
+                  placeholder="Your Name"
                   type="text"
                   {...register("name")}
                   name="name"
@@ -35,9 +50,18 @@ const AddMovie = () => {
               </div>
               <div className="border rounded-md">
                 <input
-                  placeholder="Realease Date"
-                  type="date"
-                  {...register("releasedate")}
+                  placeholder="Rating"
+                  type="string"
+                  {...register("rating")}
+                  name="releasedate"
+                  className="p-3 outline-none w-full"
+                />
+              </div>
+              <div className="border h-40 rounded-md">
+                <input
+                  placeholder="Review Comments"
+                  type="string"
+                  {...register("rating")}
                   name="releasedate"
                   className="p-3 outline-none w-full"
                 />

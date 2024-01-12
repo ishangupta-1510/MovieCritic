@@ -6,7 +6,7 @@ const Header = () => {
     <div className="bg-slate-300 w-full">
       <div className="p-5 flex justify-between items-center">
         <div>
-          <h1>MOVIECRITIC</h1>
+          <Link href="/">MOVIECRITIC</Link>
         </div>
         <div className="flex gap-3">
           <Link

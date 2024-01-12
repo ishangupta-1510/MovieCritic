@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/_components/HF.tsx"
-  ],
+, "prisma/index.ts"  ],
   "exclude": ["node_modules"]
 }
